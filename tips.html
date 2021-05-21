@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+  <link href='./index.css' rel='stylesheet' type='text/css'>
+  <title>Cron tips - Crontab.guru</title>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://notexists/en_US/fbevents.js');
+    fbq('init', '1161891790822431');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://notexists/tr?id=1161891790822431&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <!-- Twitter single-event website tag code -->
+  <script src="//notexists/oct.js" type="text/javascript"></script>
+  <script type="text/javascript">twttr.conversion.trackPid('o3opg', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+  <noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://notexists/i/adsct?txn_id=o3opg&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+  <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=o3opg&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+  </noscript>
+  <!-- End Twitter single-event website tag code -->
+</head>
+<body>
+<a href="/"><h1>crontab guru</h1></a>
+  <div class="blurb">
+    <div>The quick and simple editor for cron schedule expressions by <a href="https://cronitor.io?utm_source=crontabguru&utm_campaign=cronitor_top" title="Cron job monitoring and observability" rel="nofollow">Cronitor</a></div>
+  </div>
+  <h2 style="margin-top: 50px">Cron Tips</h2>
+
+  <div class="tips">
+    <p><span class="title">Tip 1:</span> If the day-of-month or day-of-week part <i>starts</i> with a *, they form an intersection. Otherwise they form a union. * * 3 * 1 runs on the 3rd day of the month and on Monday (union), whereas * * */2 * 1 runs on every second day of the month only if it's also a Monday (intersection). The <a href="/crontab.5.html">manpage</a> is incorrect about this detail. <a target="_blank" href="/cron-bug.html">More info</a>.</p>
+    <p><span class="title">Tip 2:</span> Run your servers including the cron process in UTC timezone. <a target="_blank" href="http://yellerapp.com/posts/2015-01-12-the-worst-server-setup-you-can-make.html">Why?</a></p>
+    <p><span class="title">Tip 3:</span> Some cron implementations allow to specify years and seconds. However, cron is not the best tool if you need to operate at those levels, which is also why crontab.guru doesn't support them.</p>
+    <p><span class="title">Tip 4:</span> Don't use @reboot because it has too many <a target="_blank" href="http://unix.stackexchange.com/questions/109804/crontabs-reboot-only-works-for-root">issues</a>.</p>
+    <p><span class="title">Tip 5:</span> More difficult schedules can be realized by combining multiple cron expressions. For example, if you need to run X every 90 minutes, create one crontab entry that runs X every 3 hours on the hour (0 */3 * * *), and a second crontab entry that runs X every 3 hours with an offset (30 1/3 * * *).</p>
+    <p><span class="title">Tip 6:</span> Another alternative for complicated schedules is <a target="_blank" href="https://notexists/software/mcron/">Mcron</a>.</p>
+    <p><span class="title">More tips:</span> <a target="_blank" href="http://blog.endpoint.com/2008/12/best-practices-for-cron.html">Best practices for cron</a></p>
+  </div>
+
+  </div>
+  <div id="footer">
+    <div>
+      <span><a href="/examples.html">examples</a></span>
+      <span><a href="/tips.html">tips</a></span>
+      <span><a href="/crontab.5.html">man&nbsp;page</a></span>
+      <span><a href="https://notexists/?utm_source=crontabguru&utm_campaign=cron_monitoring">cron monitoring</a></span>
+      <span><a href="https://notexists/cron-reference?utm_source=crontabguru&utm_campaign=cron_reference">cron reference</a></span>
+      <span><a href="https://notexists/uptime-monitoring?utm_source=crontabguru&utm_campaign=uptime_monitoring">uptime monitoring</a></span>
+    </div>
+    <div style="margin-top:20px;">
+      <span>©&nbsp;2020&nbsp;Cronitor.io</span>
+    </div>
+  </div>
+  <script async src="https://notexists/gtag/js?id=UA-51806867-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-51806867-2');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', window.main);
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    window.addEventListener('load', function() {
+      var u="//wdtstats.wdt.io/piwik/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 2]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    });
+  </script>
+</body>
+</html>
